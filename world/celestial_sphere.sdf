@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <!-- Define the ground plane -->
+    <!-- <include>
+      <uri>model://ground_plane</uri>
+    </include> -->
+
+    <!-- Define a simple light source -->
+    <!-- <include>
+      <uri>model://sun</uri>
+    </include> -->
+
+    <!-- Insert the DAE model -->
+    <model name="my_model">
+      <static>true</static> <!-- Set to true if the model should not move -->
+      <pose>0 0 0 0 0 0</pose> <!-- Position the model in the world -->
+
+      <!-- Link definition -->
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <mesh>
+              <uri>model://celestial_sphere/meshes/celestial_sphere.dae</uri> <!-- Path to the DAE file -->
+              <scale>6 6 6</scale>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

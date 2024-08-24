@@ -1,0 +1,31 @@
+<sdf version="1.6">
+    <model name="celestial_sphere">
+        <static>1</static>
+        <pose>0 0 0 0 0 0</pose>
+        <link name="link">
+            <visual name="visual">
+                <cast_shadows>0</cast_shadows>
+                <pose>0 0 0 0 0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>file://$(find celestial_sphere)/models/celestial_sphere/meshes/celestial_sphere.dae</uri>
+                        <scale>100 100 100</scale>
+                    </mesh>
+                </geometry>
+            </visual>
+            <inertial>
+                <mass>100</mass>
+                <inertia>
+                    <ixx>40</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>40</iyy>
+                    <iyz>0</iyz>
+                    <izz>40</izz>
+                </inertia>
+            </inertial>
+            <self_collide>0</self_collide>
+            <kinematic>0</kinematic>
+        </link>
+    </model>
+</sdf>
